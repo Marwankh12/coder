@@ -8,15 +8,7 @@
 </head>
 
 <body>
-<div class="loader" id="loader">
-    <div class="third">
-    
-    <div class="second">
-    
-    <div class="first"></div>
-    </div>
-    </div>
-    </div>
+
     <div class="top" >
         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 1024 1024"><path fill="#fff" d="M572.235 205.282v600.365a30.118 30.118 0 1 1-60.235 0V205.282L292.382 438.633a28.913 28.913 0 0 1-42.646 0a33.43 33.43 0 0 1 0-45.236l271.058-288.045a28.913 28.913 0 0 1 42.647 0L834.5 393.397a33.43 33.43 0 0 1 0 45.176a28.913 28.913 0 0 1-42.647 0l-219.618-233.23z"/></svg>
     </div>
@@ -182,50 +174,7 @@
             margin: 0;
             padding: 0;
         }
-        .loader {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #171c22;
-  position:fixed;
-}
-.first {
-            border: 10px solid transparent;
-            border-top-color:#3cefff ;
-            border-right-color:#3cefff ;
-            margin: 4px;
-            border-radius: 50%;
-            animation: animate1 infinite linear 2s;
-        }
-
-        .second {
-            border: 20px solid transparent;
-            border-top-color:#3cefff ;
-            border-left-color:#3cefff ;
-            margin: 4px;
-            border-radius: 50%;
-            animation: animate1 infinite linear 2s  ;
-        }
-
-        .third {
-            border: 25px solid transparent;
-            border-top-color:#3cefff ;
-            border-left-color:#3cefff ;
-            
-            border-radius: 50%;
-            animation: animate1 infinite linear 2s;
-        }
-        @keyframes animate1 {
-            from {
-            transform: rotate(0deg);
-            }
-            to {
-            transform: rotate(360deg);
-            }
-        }
-
+     
         body {
             margin: 0;
             padding: 0;
@@ -570,18 +519,9 @@
 
        
     </style>
-<script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
 <script>
     
-    window.addEventListener('load' , e => {
-  let load = document.getElementById('loader')
-  load.classList.add('hide')
-
-
-  document.body.removeChild(load)
-
-})
-    
+   
     
     
     
@@ -611,41 +551,9 @@
          }
         )
        }
-      var options = {
-  chart: {
-    type: 'line'
-  },
-  series: [{
-    name: 'visit rate',
-    data: [1000,4000,7000,10000,13000,16000]
-  }],
-  xaxis: {
-    categories: [2018,2019,2020,2021,2022,2023,]
-  }
-}
+      
 
-var chart = new ApexCharts(document.querySelector("#chart1"), options);
 
-chart.render();
-
-var options2 = {
-    fill : {
-        color : ['#25d366' ]
-    },
-  chart: {
-    type: 'line'
-
-  },
-  series: [{
-    name: 'active users',
-    data: [1000/2,4000/2,7000/2,10000/2,13000/2,16000/2]
-  }],
-  xaxis: {
-    categories: [2018,2019,2020,2021,2022,2023,]
-  }
-}
-var chart2 = new ApexCharts(document.querySelector("#chart2"), options);
-chart2.render()
         </script>
 </body>
 </html>
